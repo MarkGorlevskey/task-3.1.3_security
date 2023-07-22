@@ -13,7 +13,7 @@ public interface UserService extends UserDetailsService {
 
     User findById(Long id);
 
-    List<User> findAll();
+    List<User> getAllUsers();
 
     void update(User user, Long id);
 

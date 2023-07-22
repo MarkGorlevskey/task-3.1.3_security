@@ -30,12 +30,14 @@
         <td><input type="password" th:field="*{password}" /></td>
       </tr>
       <tr>
-        <td>Roles:</td>
-        <td>
-          <select multiple="multiple" th:field="*{roles}">
-            <option th:each="role : ${roles}" th:value="${role}" th:text="${role.name}"></option>
-          </select>
-        </td>
+        <th><label>Role: </label></th>
+        <th>
+          <input type="checkbox" name="allRoles"
+                 th:each="role: ${roles}"
+                 th:text="${role.getRoleName()}"
+                 th:value="${role.id}"
+                 th:field="*{roles}">
+        </th>
       </tr>
       <tr>
         <td colspan="2"><input type="submit" value="Save" /></td>
