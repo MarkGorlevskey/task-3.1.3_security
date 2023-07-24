@@ -30,14 +30,14 @@
         <td><input type="password" th:field="*{password}" /></td>
       </tr>
       <tr>
-        <th><label>Role: </label></th>
-        <th>
+        <td>Role: </td>
+        <td>
           <input type="checkbox" name="allRoles"
                  th:each="role: ${roles}"
                  th:text="${role.getRoleName()}"
                  th:value="${role.id}"
                  th:field="*{roles}">
-        </th>
+        </td>
       </tr>
       <tr>
         <td colspan="2"><input type="submit" value="Save" /></td>

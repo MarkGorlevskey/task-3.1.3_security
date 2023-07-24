@@ -43,6 +43,7 @@ public class AdminController {
     public String showCreateUserForm(Model model) {
         User user = new User();
         model.addAttribute("user", user);
+        model.addAttribute("roles", roleService.getRoles());
         return "new_user";
     }
 
